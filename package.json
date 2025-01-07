@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "local": "http-server ./public"
+  }
+}

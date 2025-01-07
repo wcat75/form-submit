@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Save the date for Trent and Lily's Wedding Party">
+    <title>T&L's Wedding Invitation</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Ms+Madi&family=Shippori+Mincho&display=swap" rel="stylesheet">
+
+    <!-- Semantic UI CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+    <div class="ui center aligned container custom-container">
+        <h1>Trent & Lily's Wedding</h1>
+        <p>林昱成 沈庭麗</p>
+    </div>
+
+    <div class="ui container form-container">
+        <h3>親友回覆RSVP</h3>
+        <form id="rsvp-form" class="ui form">
+            <!-- 問題 1 -->
+            <div class="field required">
+                <label>與親人關係</label>
+                <select id="relationship" name="relationship" class="ui dropdown" required>
+                    <option value="">請選擇</option>
+                    <option value="男方親友">男方親友</option>
+                    <option value="女方親友">女方親友</option>
+                    <option value="雙方親友">雙方親友</option>
+                </select>
+            </div>
+            <!-- 問題 2 -->
+            <div class="field required">
+                <label>姓名</label>
+                <input type="text" id="name" name="name" placeholder="請輸入您的姓名" required>
+            </div>
+            <!-- 問題 3 -->
+            <div class="field required">
+                <label>出席人數</label>
+                <input type="number" id="attendance" name="attendance" placeholder="請輸入出席人數" required min="1">
+            </div>
+            <!-- 問題 4 -->
+            <div class="field">
+                <label>想說的話</label>
+                <textarea id="message" name="message" placeholder="請留下您想說的話"></textarea>
+            </div>
+            <!-- 提交按鈕 -->
+            <button class="ui primary button" type="submit">提交</button>
+        </form>
+    </div>
+
+    <!-- jQuery and Semantic UI JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+</body>
+</html>
