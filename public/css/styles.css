@@ -1,26 +1,60 @@
-body {
+/* 頁面基本樣式 */
+body { 
     font-family: 'Shippori Mincho', serif;
+    font-size: 1.2rem;
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
+    display: flex;
+    justify-content: center; /* 水平置中 */
+    align-items: center; /* 垂直置中 */
+    flex-direction: column;
+    min-height: 100vh; /* 保證內容居中時填滿視窗高度 */
+    gap: 20px;
 }
 
+/* 標題容器樣式 */
 .custom-container {
-    margin-top: 20px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-h1, h3 {
+/* 標題樣式 */
+h1 {
     font-family: 'Ephesis', cursive;
+    font-size: 3rem;
+    color: #333;
 }
 
+h3 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.5rem;
+    color: #333;
+    text-align: center;
+}
+
+.subtitle {
+    font-family: 'Ephesis', cursive;
+    font-size: 1.5rem;
+    color: #5f5f5f;
+    text-align: center;
+}
+
+/* 表單外框樣式 */
 .form-container {
-    margin: 20px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
 }
 
-.ui.form .field label {
-    font-size: 16px;
+.ui.segment {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    border-radius: 10px;
+}
+
+/* 表單樣式 */
+.ui.form {
+    width: 90%;
+    margin: 0 auto; /* 水平置中 */
+    font-size: 1.2rem;
 }

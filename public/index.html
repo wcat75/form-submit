@@ -9,7 +9,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Ms+Madi&family=Shippori+Mincho&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Shippori+Mincho&display=swap" rel="stylesheet">
 
     <!-- Semantic UI CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
@@ -19,16 +19,19 @@
 
 </head>
 <body>
-    <div class="ui center aligned container custom-container">
+    <!-- 主標題 -->
+    <div class="custom-container">
         <h1>Trent & Lily's Wedding</h1>
-        <p>林昱成 沈庭麗</p>
+        <p>林昱成 & 沈庭麗</p>
     </div>
 
-    <div class="ui container form-container">
-        <h3>親友回覆RSVP</h3>
-        <form id="rsvp-form" class="ui form">
-            <!-- 問題 1 -->
-            <div class="field required">
+    <!-- 表單 -->
+    <div class="ui raised segment form-container">
+        <h3>親友回覆<br><p class="subtitle">RSVP</p></h3>
+       
+        <form class="ui form" action="https://formspree.io/f/xrbbovwz" method="POST">
+            <!-- 與親人關係 -->
+            <div class="field">
                 <label>與親人關係</label>
                 <select id="relationship" name="relationship" class="ui dropdown" required>
                     <option value="">請選擇</option>
@@ -37,23 +40,23 @@
                     <option value="雙方親友">雙方親友</option>
                 </select>
             </div>
-            <!-- 問題 2 -->
-            <div class="field required">
+            <!-- 姓名 -->
+            <div class="field">
                 <label>姓名</label>
                 <input type="text" id="name" name="name" placeholder="請輸入您的姓名" required>
             </div>
-            <!-- 問題 3 -->
-            <div class="field required">
+            <!-- 出席人數 -->
+            <div class="field">
                 <label>出席人數</label>
                 <input type="number" id="attendance" name="attendance" placeholder="請輸入出席人數" required min="1">
             </div>
-            <!-- 問題 4 -->
+            <!-- 想說的話 -->
             <div class="field">
                 <label>想說的話</label>
-                <textarea id="message" name="message" placeholder="請留下您想說的話"></textarea>
+                <input id="message" name="message" placeholder="請留下您想說的話"></input>
             </div>
             <!-- 提交按鈕 -->
-            <button class="ui primary button" type="submit">提交</button>
+            <button class="ui purple fluid button" type="submit">提交</button>
         </form>
     </div>
 
@@ -63,6 +66,5 @@
 
     <!-- Custom JS -->
     <script src="js/scripts.js"></script>
-
 </body>
 </html>
